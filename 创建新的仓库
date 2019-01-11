@@ -1,0 +1,35 @@
+创建新的gitlab项目：Command line instructions
+已有远程仓库项目地址：git@git.yonyou.com:maxrf/test-node-nginx.git
+
+
+Git global setup（设置全局用户）
+git config --global user.name "马晓荣"
+git config --global user.email "maxrf@yonyou.com"
+
+
+
+Create a new repository（在本地创建新的远程仓库）
+git clone git@git.yonyou.com:maxrf/test-node-nginx.git
+cd test-node-nginx
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+
+
+Existing folder（本地代码已有，推到远程仓库）
+cd existing_folder
+git init
+git remote add origin git@git.yonyou.com:maxrf/test-node-nginx.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+
+
+Existing Git repository（已有远程仓库）
+cd existing_repo
+git remote add origin git@git.yonyou.com:maxrf/test-node-nginx.git
+git push -u origin --all
+git push -u origin --tags
